@@ -7,7 +7,6 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'activerecord'
 gem 'sinatra-activerecord'
-gem 'nokogiri'
 gem 'bcrypt'
 
 group :development, :test do
