@@ -1,0 +1,19 @@
+<% if !current_user.nil? %>
+	<% if current_user.id== 1 %>
+		<div class="admin">
+			<h1>管理画面</h1>
+			<h2>user一覧</h2>
+			<a href="signup">新規ユーザーの作成</a>
+			<% @userdbs.order('id DESC').each do |u| %>
+				<ul>
+					<li><%= u[:id] %></li>
+					<li><%= u[:name] %></li>
+					<li><%= u[:unique_id] %></li>
+				</ul>
+		</div>
+	<% end %>
+<% else %>
+	error
+<% end %>
+<% else %>
+<% end %>

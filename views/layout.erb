@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<title><%= @viewtitle %></title>
+	</head>
+	<body>
+		<nav>
+			<div>
+				<div>
+					<% if !current_user.nil? %>
+						<li>こんにちは、<%= current_user.name %>さん</li>
+						<li><a href="/signout">ログアウト</a></li>
+						<%= yield %>
+					<% else %>
+
+						<% @viewtitle = "ログイン" %>
+						<div class="logins">
+							<center>
+								<center>
+									<h1>ログイン画面</h1>
+									<p class="sign_logs"><%= @sign_message %></p>
+								</center>
+								<center>
+									<form action="/signin" method="post">
+										<div>
+											<div>
+												<p>IDを入力してください</p>
+												<input name="unique_id" placeholder="unique_id"><br>
+												<p>パスワードを入力してください</p>
+												<input name="password" type="password" placeholder="password"><br>
+											</div>
+											<br>
+											<div>
+												<input type="submit" value="ログイン" class="user-form-button">
+											</div>
+										</div>
+									</form>
+									<!--この後一行は消す。-->
+									<h2><a href="/signup">まだ会員でない方はこちら</a></h2>
+								</center>
+							</center>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</nav>
+	</body>
+</html>

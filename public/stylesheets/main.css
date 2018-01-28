@@ -1,0 +1,53 @@
+charset"UTF-8";
+
+/* 全てに適用するCSS */
+html{
+	background-color: #FFC0CB;
+}
+
+body{
+	background-image:url("/images/sakura.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-attachment:fixed;
+	background-size: cover;
+	background-color: #FFC0CB;
+}
+div.admin{
+	background-color:rgba( 254, 242, 220, 0.9 ); 
+}
+
+div.logins{
+	background-color:rgba( 254, 242, 220, 0.7 ); 
+}
+div.message{
+	background-color:rgba( 250, 250, 250, 0.5 ); 
+}
+table.user-form{
+	width: 100%
+}
+th{
+	width: 100%
+}
+input {
+	vertical-align : middle;
+}
+
+h1{
+	color:#000000;
+	font-size:50px;
+}
+
+p.messe{
+	font-size:20px;
+}
+
+
+
+/* ウィンドウ幅が480px以上の場合に適用するCSS */
+@media screen and ( min-width:480px ){
+}
+
+/* ウィンドウ幅が0〜479pxの場合に適用するCSS */
+@media screen and ( max-width:479px ){
+}
